@@ -1,2 +1,2 @@
 # DrivingSchool
-driving school standalone application using javaFX
+Driving school standalone application using javaFX
