@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="976.0" stylesheets="/edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.subviewcontroller.WrittenTestDetailsController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="105.0" prefHeight="540.0" prefWidth="976.0">
+         <children>
+            <VBox layoutX="126.0" layoutY="119.0" prefHeight="200.0" prefWidth="191.0" spacing="25.0">
+               <children>
+                  <Label text="Admission ID" />
+                  <Label text="Customer Name" />
+                  <Label text="Exam Date" />
+                  <Label layoutX="10.0" layoutY="62.0" text="Exam Attempt Time" />
+               </children>
+            </VBox>
+            <VBox layoutX="361.0" layoutY="119.0" prefHeight="200.0" prefWidth="420.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="txtAddmissionId" />
+                  <TextField fx:id="txtCustName" editable="false" layoutX="10.0" layoutY="10.0" />
+                  <JFXDatePicker fx:id="txtExamDate" />
+                  <ComboBox fx:id="comboExamAttempt" prefWidth="150.0" promptText="Exam Attempt" />
+               </children>
+            </VBox>
+            <JFXButton fx:id="bttSaveDetails" layoutX="758.0" layoutY="415.0" onAction="#bttSaveDetailsClicked" prefHeight="40.0" prefWidth="163.0" styleClass="controlleButtons" text="Save Details" />
+            <Pane layoutX="126.0" layoutY="359.0" prefHeight="112.0" prefWidth="537.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Note that, onece you save th data to the system, those can't be modified or changed." wrappingWidth="490.818359375">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane prefHeight="105.0" prefWidth="976.0">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="976.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/subViewTopCover.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Written Exam Details">
+               <font>
+                  <Font name="Calibri Bold" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Customer's Written Exam Details">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

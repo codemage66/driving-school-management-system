@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="976.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="edu.ijse.gdse41.drivingschool.viewcontroller.UpdatePersonalController">
+   <children>
+      <VBox layoutX="43.0" layoutY="63.0" prefHeight="281.0" prefWidth="195.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Details">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Text>
+            <Label text="Full Name" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="157.0" text="Name with Initials ">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="33.0" text="NIC " />
+            <Label text="Gender" />
+            <Label layoutX="10.0" layoutY="56.0" text="Date  of Birth" />
+            <Label layoutX="10.0" layoutY="79.0" text="Address" />
+            <Label layoutX="10.0" layoutY="102.0" text="Telephone number" />
+         </children>
+      </VBox>
+      <VBox layoutX="43.0" layoutY="359.0" prefHeight="134.0" prefWidth="159.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="License Details" wrappingWidth="194.97998046875">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Text>
+            <Label text="License type" />
+            <Label text="Vehical Classes" />
+            <Label layoutX="10.0" layoutY="74.0" text="Lession Type" />
+         </children>
+      </VBox>
+      <VBox layoutX="43.0" layoutY="504.0" prefHeight="126.0" prefWidth="173.0" spacing="10.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Details" />
+            <Label text="Course Fee" />
+            <Label layoutX="10.0" layoutY="31.0" text="Due Balance" />
+         </children>
+      </VBox>
+      <VBox layoutX="238.0" layoutY="87.0" prefHeight="261.0" prefWidth="705.0" spacing="5.0">
+         <children>
+            <TextField prefHeight="31.0" prefWidth="652.0" fx:id="xtFullName" />
+            <TextField fx:id="txtInitialName" prefHeight="15.0" prefWidth="652.0" />
+            <TextField fx:id="txtNIC" prefHeight="15.0" prefWidth="652.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="29.0" prefWidth="705.0" spacing="20.0">
+               <children>
+                  <JFXCheckBox fx:id="checkMale" prefHeight="23.0" prefWidth="85.0" text="Male" />
+                  <JFXCheckBox fx:id="chechFemale" text="Female" />
+               </children>
+            </HBox>
+            <TextField fx:id="txtDob">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txtAddress" layoutX="10.0" layoutY="152.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="tel1" />
+                  <TextField fx:id="tel2" layoutX="10.0" layoutY="10.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="238.0" layoutY="388.0" prefHeight="116.0" prefWidth="392.0" spacing="5.0">
+         <children>
+            <TextField fx:id="txtLicenstype" />
+            <TextField fx:id="txtVehicalClass" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="txtleession" layoutX="10.0" layoutY="41.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="238.0" layoutY="527.0" prefHeight="80.0" prefWidth="173.0" spacing="5.0">
+         <children>
+            <TextField fx:id="txtCourseFee" />
+            <TextField fx:id="txtBalance" layoutX="10.0" layoutY="10.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

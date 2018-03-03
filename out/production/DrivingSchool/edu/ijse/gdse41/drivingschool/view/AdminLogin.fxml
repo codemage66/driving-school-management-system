@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="700.0" prefWidth="1200.0" stylesheets="/edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.viewcontroller.AdminLoginController">
+   <children>
+      <AnchorPane fx:id="overPane" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/adminLogin.jpg" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtUsername" focusColor="WHITE" labelFloat="true" layoutX="576.0" layoutY="304.0" prefHeight="29.0" prefWidth="280.0" promptText="Username" unFocusColor="#192c33">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" focusColor="WHITE" labelFloat="true" layoutX="576.0" layoutY="372.0" onAction="#passLoginKey" prefHeight="29.0" prefWidth="280.0" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="bttLogin" layoutX="684.0" layoutY="439.0" onAction="#bttLoginClicked" prefHeight="31.0" prefWidth="172.0" style="-fx-background-color: #5674b9;" text="Login" textFill="#192c33">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <HBox layoutX="1084.0" layoutY="14.0" prefHeight="31.0" prefWidth="102.0" spacing="5.0">
+               <children>
+                  <Button fx:id="bttmini" mnemonicParsing="false" onAction="#bttminiClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttMax" layoutX="42.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttMaxClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttClose" layoutX="10.0" layoutY="10.0" lineSpacing="50.0" mnemonicParsing="false" onAction="#bttCloseClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="bttBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#bttBackClicked" prefHeight="40.0" prefWidth="40.0" styleClass="backButt" />
+            <Label fx:id="lblSourse" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

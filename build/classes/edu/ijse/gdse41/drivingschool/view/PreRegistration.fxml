@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="700.0" prefWidth="1200.0" stylesheets="/edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.viewcontroller.PreRegistrationController">
+   <children>
+      <AnchorPane fx:id="overPane" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <Label fx:id="lblSourse" text="Label" />
+            <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../edu/ijse/gdse41/drivingschool/image/Pre-registration.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="1077.0" layoutY="14.0" prefHeight="40.0" prefWidth="109.0" spacing="5.0">
+               <children>
+                  <Button fx:id="bttMini" mnemonicParsing="false" onAction="#bbtMiniClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttMax" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttmaxclicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                <Button fx:id="bttClose" mnemonicParsing="false" onAction="#bttcloseClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+               </children>
+            </HBox>
+            <VBox layoutX="109.0" layoutY="172.0" prefHeight="424.0" prefWidth="800.0" spacing="20.0" styleClass="text-field">
+               <children>
+                  <TextField fx:id="txtnName" promptText="Name" />
+                  <TextField fx:id="txtAddress" promptText="Address" />
+                  <HBox prefHeight="34.0" prefWidth="800.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="txtMobileNum" prefHeight="31.0" prefWidth="234.0" promptText="Mobile Number" styleClass="text-field" />
+                        <TextField fx:id="txtMobileNum1" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="234.0" promptText="Mobile Number" styleClass="text-field" />
+                     </children>
+                  </HBox>
+                  <JFXDatePicker fx:id="dobPicker" defaultColor="#51c219" />
+                  <ComboBox fx:id="comboLicenseType" prefHeight="0.0" prefWidth="285.0" promptText="License type" />
+                  <HBox prefHeight="54.0" prefWidth="800.0" spacing="30.0">
+                     <children>
+                        <ComboBox fx:id="comboVehicalClass" prefHeight="40.0" prefWidth="194.0" promptText="Vehical Class" />
+                        <ComboBox fx:id="comboTransmission" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="255.0" promptText="Transmission Type" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="35.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="bttBack" mnemonicParsing="false" onAction="#bttBackClicked" prefHeight="40.0" prefWidth="40.0" styleClass="backButt" />
+            <HBox layoutX="767.0" layoutY="587.0" prefHeight="51.0" prefWidth="350.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="bttPayment" buttonType="RAISED" onAction="#bttPaymentClicked" prefHeight="45.0" prefWidth="150.0" styleClass="cancelControllButtonn" text="Cancel" />
+                  <JFXButton fx:id="bttSave" buttonType="RAISED" onAction="#bttSaveClicked" prefHeight="45.0" prefWidth="171.0" styleClass="controlleButtons" text="Save &amp; Next" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

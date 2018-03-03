@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="700.0" prefWidth="1200.0" stylesheets="/edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.viewcontroller.AddCustNewController">
+   <children>
+      <AnchorPane fx:id="overPane" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/newAddCust.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="topAnchor" layoutX="45.0" onMouseDragged="#setStage" onMousePressed="#getCoordinates" prefHeight="50.0" prefWidth="1032.0" />
+            <HBox layoutX="53.0" layoutY="66.0" prefHeight="50.0" prefWidth="557.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="bttPreReg" onAction="#bttPreRegClicked" prefHeight="50.0" prefWidth="270.0" styleClass="custButtons" text="Pre-Registration" />
+                  <JFXButton fx:id="bttReg" onAction="#bttRegClicked" prefHeight="40.0" prefWidth="218.0" styleClass="custButtons" text="Registration" />
+               </children>
+            </HBox>
+            <AnchorPane fx:id="containtPane" layoutX="53.0" layoutY="141.0" prefHeight="521.0" prefWidth="1095.0" />
+            <Label fx:id="lblPrePoint" layoutX="69.0" layoutY="130.0" prefHeight="30.0" prefWidth="30.0" rotate="45.0" styleClass="bttpoint" />
+            <Label fx:id="lblRegPoint" layoutX="350.0" layoutY="130.0" prefHeight="30.0" prefWidth="30.0" rotate="45.0" styleClass="bttpoint" />
+            <HBox layoutX="1077.0" layoutY="14.0" prefHeight="32.0" prefWidth="109.0" spacing="5.0">
+               <children>
+                  <Button fx:id="bttMini" mnemonicParsing="false" onAction="#bttMiniClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttMax" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttMaxClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttClose" layoutX="72.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttCloseClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+               </children>
+            </HBox>
+            <Button fx:id="bttBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#bttBackClicked" prefHeight="40.0" prefWidth="40.0" styleClass="backButt" />
+            <Label fx:id="lblSourse" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

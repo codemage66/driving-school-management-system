@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" fx:id="rootAnchor" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.viewcontroller.NewCustomerController">
+   <children>
+      <AnchorPane fx:id="overAnchor" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" styleClass="custButtons">
+               <image>
+                  <Image url="@../image/newCustomer.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="140.0" layoutY="130.0" prefHeight="525.0" prefWidth="920.0" spacing="15.0">
+               <children>
+                  <JFXButton fx:id="bttPreReg" buttonType="RAISED" onAction="#bttPreRegClicked" prefHeight="525.0" prefWidth="451.0" styleClass="custButtons" text="Pre-Registration" />
+                  <JFXButton fx:id="bttReg" buttonType="RAISED" onAction="#bttRegClicked" prefHeight="525.0" prefWidth="451.0" styleClass="custButtons" text="Registration" />
+               </children>
+            </HBox>
+            <HBox layoutX="1084.0" layoutY="14.0" prefHeight="34.0" prefWidth="102.0" spacing="5.0">
+               <children>
+                  <Button fx:id="bttMini" mnemonicParsing="false" onAction="#bttMiniClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttMax" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttmaxClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttClose" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttCloseClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+               </children>
+            </HBox>
+            <Button fx:id="bttBack" mnemonicParsing="false" onAction="#bttbackClicked" prefHeight="40.0" prefWidth="40.0" styleClass="backButt" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblRoot" />
+   </children>
+</AnchorPane>

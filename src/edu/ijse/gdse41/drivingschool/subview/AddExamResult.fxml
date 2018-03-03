@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.SegmentedButton?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.subviewcontroller.AddExamResultController">
+   <children>
+      <Pane prefHeight="105.0" prefWidth="976.0">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="976.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/subViewTopCover.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Results">
+               <font>
+                  <Font name="Calibri Bold" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add customer's ExamsResults">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TabPane layoutX="2.0" layoutY="107.0" prefHeight="541.0" prefWidth="968.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Wtitten Exam">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="963.0">
+                     <children>
+                        <VBox layoutX="71.0" layoutY="52.0" prefHeight="161.0" prefWidth="206.0" spacing="20.0">
+                           <children>
+                              <Label text="Admission ID" />
+                              <Label layoutX="10.0" layoutY="10.0" text="Customer Name" />
+                              <Label layoutX="10.0" layoutY="36.0" text="Attempt Time" />
+                              <Label layoutX="10.0" layoutY="62.0" text="Exam Date">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Label>
+                              <Label layoutX="10.0" layoutY="88.0" text="Result">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="114.0" text="Remarks">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="258.0" layoutY="52.0" prefHeight="354.0" prefWidth="516.0" spacing="15.0">
+                           <children>
+                              <TextField fx:id="txtWAddmissionId" editable="false" />
+                              <TextField fx:id="txtWCustName" editable="false" />
+                              <SegmentedButton fx:id="Wsegmented" prefHeight="39.0" prefWidth="516.0" />
+                              <TextField fx:id="txtWDate" editable="false">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin></TextField>
+                              <HBox prefHeight="48.0" prefWidth="516.0" spacing="20.0">
+                                 <children>
+                                    <RadioButton fx:id="rdoWpass" mnemonicParsing="false" text="Pass" />
+                                    <RadioButton fx:id="rdoWFail" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Fail" />
+                                    <RadioButton fx:id="rdoWAbsant" layoutX="124.0" layoutY="10.0" mnemonicParsing="false" text="Absent" />
+                                 </children>
+                              </HBox>
+                              <TextArea fx:id="txtWRemarks" prefHeight="97.0" prefWidth="372.0">
+                                 <VBox.margin>
+                                    <Insets top="-10.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="bttWSave" layoutX="733.0" layoutY="426.0" onAction="#bttWSaveClicked" prefHeight="40.0" prefWidth="172.0" styleClass="controlleButtons" text="Save" />
+                        <ToggleButton fx:id="togW1" layoutY="14.0" mnemonicParsing="false" text="1 st Attempt" />
+                        <ToggleButton fx:id="togW2" layoutX="97.0" layoutY="14.0" mnemonicParsing="false" text="2 nd Attempt" />
+                        <ToggleButton fx:id="togW3" layoutX="199.0" layoutY="14.0" mnemonicParsing="false" text="3 rd Attempt" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Trial Exam">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="71.0" layoutY="52.0" prefHeight="293.0" prefWidth="190.0" spacing="20.0">
+                           <children>
+                              <Label text="Admission ID" />
+                              <Label text="Customer Name" />
+                              <Label text="Attempt Time" />
+                              <Label text="Exam Date">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Label>
+                              <Label text="Result">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Remarks">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="258.0" layoutY="52.0" prefHeight="354.0" prefWidth="519.0" spacing="15.0">
+                           <children>
+                              <TextField fx:id="txtTAddmssionId" editable="false" />
+                              <TextField fx:id="txtTCustName" editable="false" />
+                              <SegmentedButton fx:id="Tsegmented" prefHeight="39.0" prefWidth="518.0" />
+                              <TextField fx:id="txtTDate" />
+                              <HBox prefHeight="48.0" prefWidth="519.0" spacing="20.0">
+                                 <children>
+                                    <RadioButton fx:id="rdoTpass" mnemonicParsing="false" text="Pass" />
+                                    <RadioButton fx:id="rdoTFail" mnemonicParsing="false" text="Fail" />
+                                    <RadioButton fx:id="rdoTAbsant" mnemonicParsing="false" text="Absant" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <TextArea fx:id="txtTRemarks" prefHeight="80.0" prefWidth="519.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="btttSave" layoutX="733.0" layoutY="426.0" onAction="#btttSaveClicked" prefHeight="40.0" prefWidth="172.0" styleClass="controlleButtons" text="Save" />
+                        <ToggleButton fx:id="togT1" layoutX="14.0" mnemonicParsing="false" text="1 st Attempt" />
+                        <ToggleButton fx:id="togT2" layoutX="111.0" mnemonicParsing="false" text="2 nd Attempt" />
+                        <ToggleButton fx:id="togT3" layoutX="212.0" mnemonicParsing="false" text="3 rd Attempt" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

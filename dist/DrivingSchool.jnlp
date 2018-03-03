@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DrivingSchool.jnlp">
+  <information>
+    <title>DrivingSchool</title>
+    <vendor>Sandman</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DrivingSchool.jar" size="1824109" download="eager" />
+    <jar href="lib\barbecue-1.5-beta1.jar" size="91079" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.3.jar" size="246174" download="eager" />
+    <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />
+    <jar href="lib\commons-digester-1.7.jar" size="139966" download="eager" />
+    <jar href="lib\commons-javaflow-1590792.jar" size="54712" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib\jasperreports-6.3.1.jar" size="5527829" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.3.1.jar" size="2478097" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.3.1.jar" size="5588071" download="eager" />
+    <jar href="lib\jdom.jar" size="153253" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2363182" download="eager" />
+    <jar href="lib\junit-4.12.jar" size="316791" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.21.jar" size="827942" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="DrivingSchool" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="edu.ijse.gdse41.drivingschool.main.Main"  name="DrivingSchool" />
+  <update check="always"/>
+</jnlp>

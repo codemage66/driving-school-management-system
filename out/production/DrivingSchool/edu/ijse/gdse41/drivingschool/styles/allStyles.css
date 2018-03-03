@@ -1,0 +1,246 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 13, 2017, 11:56:57 AM
+    Author     : Sandman
+*/
+.windowBtns{
+    -fx-background-color: #2f6275;
+    
+    
+}
+
+.windowBtns:hover {
+    -fx-background-color: #0c4155;
+}
+
+.textfieldFordash {
+    -fx-font-size:15pt;
+    -fx-font-family: "Calibri Bold";
+    
+}
+.bttpoint{
+    -fx-background-image: url("/edu/ijse/gdse41/drivingschool/image/rect.jpg");
+}
+
+.backButt{
+    -fx-background-size: 40px;
+    -fx-background-color: #2f6275;
+    -fx-background-image: url("/edu/ijse/gdse41/drivingschool/image/Back-26.png");
+}
+.backButt:hover{
+    -fx-background-color: #0c4155;
+}
+.background{
+    -fx-background-image: url("../Images/");
+}
+
+.controlleButtons{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #512da8;
+    -fx-font-family: "Calibri Bold";
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.cancelControllButtonn{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #5674b9;
+    -fx-font-family: "Calibri Bold";
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.naviButtons{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #5674b9;
+    -fx-font-family: "Microsoft PhagsPa Bold";
+    -fx-font-weight: bold;
+    -fx-font-size: 25pt;
+    -fx-text-fill: #192c33;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.newCustNaviButtons{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color:  #5674b9;
+    -fx-font-family: "Microsoft PhagsPa Bold";
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+    -fx-text-fill: white;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.custButtons{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #2f6275;
+    -fx-font-family: "Microsoft PhagsPa Bold";
+    -fx-font-weight: bold;
+    -fx-font-size: 25pt;
+    -fx-text-fill: #192c33;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.text{
+    
+    -fx-font-family: "Calibri";
+    -fx-text-fill:  #2f6275;
+}
+
+.adminLoglable{
+    -fx-font-size: 16pt;
+    -fx-font-family: "Calibri bold";
+    -fx-text-fill: black;
+}
+
+.adminLoglable:hover{
+    -fx-font-size: 16pt;
+    -fx-font-family: "Calibri bold";
+    -fx-text-fill: white;
+    -fx-text-decoration: underline;
+}
+.label {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Calibri bold";
+    -fx-text-fill: black;
+}
+.labelPay {
+    -fx-font-size: 35pt;
+    -fx-font-family: "Calibri bold";
+    -fx-text-fill: white;
+}
+.Radiolabel {
+    -fx-font-size: 15pt;
+    -fx-font-family: "Calibri bold";
+    -fx-text-fill: black;
+}
+
+.label-bright {
+    -fx-font-size: 50pt;
+    -fx-font-family: "Calibri";
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Calibri bold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+/* ----------------- sandman list view -------------------------*/
+
+#sandman .list-cell:filled:selected:focused {
+    -fx-background-color: #80adbe;
+    -fx-text-fill: black;
+}
+
+#sandman .list-cell:filled:selected{
+    -fx-background-color: #80adbe;
+    -fx-text-fill: white;
+}
+
+#sandman .list-cell {
+    -fx-background-color: #2f6275;
+    -fx-text-fill: white;
+    -fx-cell-size: 3.6em;
+    -fx-font: 18px "Corbel Bold";
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-family:"Corbel Bold";
+    -fx-border-width: 0px;
+    -fx-border-color: #512da7;
+    -fx-border-spacing: 100px;
+    
+    
+}
+
+#sandman .list-cell:filled:hover {
+    -fx-background-color: #033a4e;
+    -fx-text-fill: white;
+}
+
+.list-view{
+    
+    -fx-background-color: #2f6275;
+    -fx-border-insets: 0;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-border-color: #512da7;
+    -fx-border-width: 1px;
+}
+/* ----------------- sandman Tabel view -------------------------*/
+.table-view {
+    -fx-base: #2f6275;
+    -fx-control-inner-background:  #5674ba;
+    -fx-background-color: #512da7;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color:  #512da7;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 15pt;
+    -fx-font-family: "Calibri";
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.table-view .table-cell{
+    -fx-font-size: 14pt;
+    -fx-text-fill: white;
+    -fx-font-family:"Calibri";
+}
+
+
+#sandmanErrorText {
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;
+}
+
+#sandmanReverseErrorText {
+    -fx-text-box-border: green ;
+    -fx-focus-color: green ;
+}
+#SandmanLogText{
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+}

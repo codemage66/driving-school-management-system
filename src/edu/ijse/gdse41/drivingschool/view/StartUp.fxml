@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.viewcontroller.StartUpController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                <Image url="@../image/start_page.jpg" />
+                </image>
+            </ImageView>
+            <JFXSpinner layoutX="584.0" layoutY="482.0" style="-jfx-radius: 25;" />    
+         </children></AnchorPane> 
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.subviewcontroller.Pre_regController">
+   <children>
+      <VBox layoutX="29.0" layoutY="14.0" prefHeight="422.0" prefWidth="883.0" spacing="20.0" styleClass="text-field">
+         <children>
+            <TextField fx:id="txtnName" prefHeight="31.0" prefWidth="832.0" promptText="Name" />
+            <TextField fx:id="txtAddress" promptText="Address" />
+            <HBox prefHeight="34.0" prefWidth="800.0" spacing="30.0">
+               <children>
+                  <TextField fx:id="txtMobileNum" prefHeight="31.0" prefWidth="234.0" promptText="Mobile Number 1" styleClass="text-field" />
+               </children>
+            </HBox>
+            <JFXDatePicker fx:id="dobPicker" defaultColor="#51c219" />
+            <ComboBox fx:id="comboLicenseType" prefHeight="0.0" prefWidth="285.0" promptText="License type" />
+            <HBox prefHeight="54.0" prefWidth="1059.0" spacing="30.0">
+               <children>
+                  <ComboBox fx:id="comboVehicalClass" prefHeight="40.0" prefWidth="194.0" promptText="Vehical Class" />
+                  <ComboBox fx:id="comboTransmission" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="255.0" promptText="Transmission Type" />
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="883.0" spacing="30.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Proposed Course Fee">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtFee" prefHeight="31.0" prefWidth="257.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="35.0" />
+         </padding>
+      </VBox>
+      <HBox layoutX="698.0" layoutY="440.0" prefHeight="51.0" prefWidth="350.0" spacing="20.0">
+         <children>
+            <JFXButton fx:id="bttPayment" buttonType="RAISED" onAction="#bttPaymentClicked" prefHeight="45.0" prefWidth="150.0" styleClass="cancelControllButtonn" text="Cancel" />
+            <JFXButton fx:id="bttSave" buttonType="RAISED" onAction="#bttSaveClicked" prefHeight="45.0" prefWidth="171.0" styleClass="controlleButtons" text="Save &amp; Next" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

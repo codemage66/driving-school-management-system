@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="1095.0" stylesheets="/edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.subviewcontroller.Pre_paymentController">
+   <children>
+      <AnchorPane prefHeight="521.0" prefWidth="300.0">
+         <children>
+            <ImageView fitHeight="521.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/payBar.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="39.0" layoutY="174.0" prefHeight="49.0" prefWidth="222.0" styleClass="label-header" text="Course Fee" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFee" layoutX="34.0" layoutY="237.0" prefHeight="48.0" prefWidth="203.0" styleClass="labelPay" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text layoutX="321.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payments">
+         <font>
+            <Font name="Calibri" size="48.0" />
+         </font>
+      </Text>
+      <VBox layoutX="404.0" layoutY="131.0" prefHeight="165.0" prefWidth="512.0" spacing="20.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="512.0" spacing="60.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="304.0" text="Customer Admission ID" />
+                  <TextField fx:id="txtAddmissionId" prefHeight="31.0" prefWidth="326.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="512.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="327.0" text="Customer Name" />
+                  <TextField fx:id="txtCustName" editable="false" prefHeight="31.0" prefWidth="290.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="34.0" prefWidth="424.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="293.0" text="Amount" />
+                  <TextField fx:id="txtAmount" prefHeight="31.0" prefWidth="258.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="bttpay" layoutX="455.0" layoutY="378.0" onAction="#bttPayClicked" prefHeight="48.0" prefWidth="409.0" styleClass="controlleButtons" text="PAY" />
+   </children>
+</AnchorPane>

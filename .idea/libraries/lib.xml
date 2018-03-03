@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/lib/jfoenix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jasperreports-fonts-6.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/mysql-connector-java-5.1.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-digester-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/controlsfx-8.40.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jasperreports-6.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/mysql-connector-java-5.1.23-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-collections-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jasperreports-javaflow-6.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-beanutils-1.9.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-javaflow-1590792.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/barbecue-1.5-beta1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

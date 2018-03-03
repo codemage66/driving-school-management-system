@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="976.0" stylesheets="/edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.subviewcontroller.ShowPaymentDetailsController">
+   <children>
+      <Pane layoutY="-6.0" prefHeight="105.0" prefWidth="976.0">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="976.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/subViewTopCover.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Details">
+               <font>
+                  <Font name="Calibri Bold" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get Customer'sPayment Details">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="182.0" layoutY="187.0" prefHeight="190.0" prefWidth="613.0">
+         <children>
+            <VBox prefHeight="198.0" prefWidth="210.0" spacing="15.0">
+               <children>
+                  <Label text="Customer AdmissionID" />
+                  <Label layoutX="10.0" layoutY="10.0" text="Customer Name" />
+                  <Label layoutX="10.0" layoutY="36.0" text="Course Amount" />
+                  <Label layoutX="10.0" layoutY="62.0" text="Pending Balance" />
+               </children>
+            </VBox>
+            <VBox layoutX="277.0" prefHeight="166.0" prefWidth="258.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="txtAddmissionId" editable="false" />
+                  <TextField fx:id="txtCustName" editable="false" layoutX="10.0" layoutY="10.0" />
+                  <TextField fx:id="txtCourseAmount" editable="false" layoutX="10.0" layoutY="41.0" />
+                  <TextField fx:id="txtBalance" editable="false" layoutX="10.0" layoutY="72.0" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <TableView fx:id="payLogTable" layoutX="137.0" layoutY="387.0" prefHeight="200.0" prefWidth="641.0">
+        <columns>
+          <TableColumn fx:id="tblPayId" editable="false" prefWidth="170.0" text="Payment ID" />
+          <TableColumn fx:id="tblAmount" minWidth="0.0" prefWidth="250.0" text="Amount" />
+            <TableColumn fx:id="tblPayDate" prefWidth="220.0" text="Payed Date" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="bttPayReport" layoutX="733.0" layoutY="604.0" onAction="#bttPayReportClicked" prefHeight="32.0" prefWidth="210.0" styleClass="controlleButtons" text="Get Payment Report" />
+   </children>
+</AnchorPane>

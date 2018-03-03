@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" stylesheets="/edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.viewcontroller.AdminAdduserController">
+    <stylesheets>
+        <URL value="@adminadduser.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="overPane" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/adminAddUser.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="topPane" layoutX="49.0" onMouseDragged="#setStage" onMousePressed="#getCoordinates" prefHeight="40.0" prefWidth="1041.0" />
+           
+            <PasswordField fx:id="txtPass" layoutX="134.0" layoutY="350.0" prefHeight="31.0" prefWidth="267.0" promptText="Password" />
+            <PasswordField fx:id="txtconPass" layoutX="134.0" layoutY="414.0" prefHeight="31.0" prefWidth="267.0" promptText="Confirm Password" />
+            <JFXButton fx:id="bttSave" layoutX="924.0" layoutY="569.0" onAction="#bttSaveClicked" prefHeight="53.0" prefWidth="161.0" styleClass="controlleButtons" text="Save" />
+            <JFXButton fx:id="bttCancel" layoutX="724.0" layoutY="569.0" onAction="#bttCancelClicked" prefHeight="53.0" prefWidth="161.0" styleClass="controlleButtons" text="Cancel" />
+            <HBox layoutX="1092.0" layoutY="14.0" prefHeight="37.0" prefWidth="108.0" spacing="5.0">
+               <children>
+                  <Button fx:id="bttMini" mnemonicParsing="false" onAction="#bttMiniClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttMax" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttMaxClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                  <Button fx:id="bttClose" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttCloseClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="bttBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#bttBackClicked" prefHeight="40.0" prefWidth="40.0" styleClass="backButt" />
+            <TextField fx:id="txtName" layoutX="134.0" layoutY="200.0" onKeyTyped="#nameTyped" prefHeight="31.0" prefWidth="482.0" promptText="User's Name" />
+            <TextField fx:id="txtUsername" layoutX="134.0" layoutY="265.0" onKeyTyped="#usernameTyped" prefHeight="31.0" prefWidth="337.0" promptText="Username" />
+            <Label fx:id="lblSource" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

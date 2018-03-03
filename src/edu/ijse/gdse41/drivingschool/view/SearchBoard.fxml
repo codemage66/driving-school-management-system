@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1200.0" prefHeight="700.0" prefWidth="1200.0" stylesheets="/edu/ijse/gdse41/drivingschool/styles/allStyles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.gdse41.drivingschool.viewcontroller.SearchBoardController">
+   <children>
+      <AnchorPane fx:id="overAnchor" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <AnchorPane fx:id="containtPane" layoutX="225.0" layoutY="51.0" prefHeight="650.0" prefWidth="976.0" />
+            <Label fx:id="lblSourse" text="Label" />
+            <AnchorPane fx:id="sildBar" prefHeight="700.0" prefWidth="225.0">
+               <children>
+                  <Label fx:id="lblSourse1" text="Sourse" />
+                  <ListView id="sandman" fx:id="listView" layoutY="81.0" onMouseClicked="#listClickedEvent" prefHeight="620.0" prefWidth="225.0" />
+               </children>
+            </AnchorPane>
+            <Pane prefHeight="82.0" prefWidth="225.0" style="-fx-background-color: #512da7;">
+               <children>
+                  <Button fx:id="bttback" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#bttBackClicked" prefHeight="40.0" prefWidth="40.0" styleClass="backButt" />
+                  <JFXButton fx:id="bttNewCust" layoutX="53.0" layoutY="5.0" onAction="#bttNewCustClikcked" prefHeight="40.0" prefWidth="170.0" styleClass="newCustNaviButtons" text="New Customer" />
+               </children>
+            </Pane>
+            <AnchorPane fx:id="topPane" layoutX="225.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseDragged="#settinStage" onMousePressed="#getCoordinates" prefHeight="57.0" prefWidth="976.0" style="-fx-background-color: #512da7;" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox layoutX="837.0" layoutY="9.0" prefHeight="33.0" prefWidth="125.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="bttMini" mnemonicParsing="false" onAction="#bttMiniClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                        <Button fx:id="bttMax" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttMaxClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                        <Button fx:id="bttClose" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttCloseClicked" prefHeight="32.0" prefWidth="32.0" styleClass="windowBtns" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
