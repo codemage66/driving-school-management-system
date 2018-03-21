@@ -55,7 +55,7 @@ public class PaymentDBController {
         ArrayList<PaymentDTO> payList=new ArrayList<>();
         
         while (rst.next()) {            
-            PaymentDTO paydDto=new PaymentDTO(rst.getString("payment_id"), rst.getString("addmissionId"), rst.getDouble("amount"), rst.getString("payment_date"));
+            PaymentDTO paydDto=new PaymentDTO(rst.getString("paymentId"), rst.getString("addmissionId"), rst.getDouble("amount"), rst.getString("payment_date"));
             payList.add(paydDto);       
         }
         return payList;

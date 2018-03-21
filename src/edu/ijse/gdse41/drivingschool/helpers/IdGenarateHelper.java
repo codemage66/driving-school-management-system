@@ -21,31 +21,41 @@ import java.util.Date;
 public class IdGenarateHelper {
     
     
-    public static String genarateAddmissionId () throws ClassNotFoundException, SQLException{
+    public static String genarateAddmissionId () throws ClassNotFoundException, SQLException {
         String date = new SimpleDateFormat("YYMMdd").format(new Date());
-        String query="SELECT addmissionId FROM customer";
-        Connection conn=DBConnection.getDBConnection().getConnection();
-        Statement stm=conn.createStatement();
-        ResultSet rst=stm.executeQuery(query);
-        rst.last();
-        String addmissioinId="";
+//        String query="SELECT addmissionId FROM customer";
+//        Connection conn=DBConnection.getDBConnection().getConnection();
+//        Statement stm=conn.createStatement();
+//        ResultSet rst=stm.executeQuery(query);
+//        rst.last();
+        String lastId = IdDBController.getLastId("customer", "addmissionid");
+
+        String addmissioinId = "";
         int tempAdd;
-        char [] addmission=rst.getString(1).toCharArray();
-        for(int i=6;i< addmission.length;i++){
-            addmissioinId=addmissioinId+addmission[i];
+
+        if (lastId != null) {
+            char[] addmission = lastId.toCharArray();
+            for (int i = 6; i < addmission.length; i++) {
+                addmissioinId = addmissioinId + addmission[i];
+            }
+
+            if (addmissioinId.equals("99")) {
+                addmissioinId = "00";
+            }
+            tempAdd = Integer.parseInt(addmissioinId);
+
+            if (tempAdd < 9) {
+                addmissioinId = date + "0" + (tempAdd + 1);
+
+            } else {
+                addmissioinId = date + (tempAdd + 1);
+            }
+            //System.out.println(addmissioinId);
+            return addmissioinId;
+        }else {
+            addmissioinId = date+"00";
+            return addmissioinId;
         }
-        if(addmissioinId.equals("99")){
-            addmissioinId="00";
-        }
-        tempAdd=Integer.parseInt(addmissioinId);
-        if(tempAdd<9){
-           addmissioinId=date+"0"+(tempAdd+1);
-           
-        }else{
-            addmissioinId=date+(tempAdd+1);
-        }
-        //System.out.println(addmissioinId);
-        return addmissioinId;
     }
     
     public static String genaratePrId() throws SQLException, ClassNotFoundException{
@@ -125,7 +135,7 @@ public class IdGenarateHelper {
         return newId;
     }
      public static String genaratePID() throws SQLException, ClassNotFoundException{
-        String lastId = IdDBController.getLastId("paymentLog", "payment_id");
+        String lastId = IdDBController.getLastId("paymentLog", "paymentId");
         String newId;
         String prefix="P";
         int len=prefix.length();

@@ -202,31 +202,12 @@ public class NavigationPageController implements Initializable {
         bttNewCust.setTooltip(new Tooltip("Add New Customers to the System"));
         bttUpComing.setTooltip(new Tooltip("Get Reports about pending customers for exams and trial tests"));
         bttBack.setTooltip(new Tooltip("Log-Out"));
+
             Platform.runLater(()->{
                 primaryStage= (Stage) lblSourse.getScene().getWindow();
                 ResizeHelper.addResizeListener(primaryStage);
             });
-         try {   
-            tblCustName.setCellValueFactory(new PropertyValueFactory<NotificationTableModel, String>("custName"));
-            tblTel.setCellValueFactory(new PropertyValueFactory<NotificationTableModel, String>("tel1"));
-            tblCata.setCellValueFactory(new PropertyValueFactory<NotificationTableModel, String>("cata"));
-            tblClass.setCellValueFactory(new PropertyValueFactory<NotificationTableModel, String>("lClass"));
-            notiTable.setItems(data);
-            ArrayList <NotificationDTO> notiArray=null;
-            notiArray=NotoficationDBController.getCustNotification();
-             for (NotificationDTO notificationDTO : notiArray) {
-                NotificationTableModel ntd=new NotificationTableModel();
-                ntd.setCustName(notificationDTO.getCustName());
-                ntd.setTel1(notificationDTO.getTel());
-                ntd.setCata(notificationDTO.getCatName());
-                ntd.setLClass(notificationDTO.getClassType());
-                data.add(ntd);
-             }
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(NavigationPageController.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(NavigationPageController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        initNotificationTbl();
     }    
     
     @FXML
@@ -239,5 +220,32 @@ public class NavigationPageController implements Initializable {
     void setStage(MouseEvent event) {
         primaryStage.setX(event.getScreenX()+ SearchBoardController.Distance.deltaX);
         primaryStage.setY(event.getScreenY()+ SearchBoardController.Distance.deltaY);
+    }
+
+    private void initNotificationTbl(){
+        try {
+            tblCustName.setCellValueFactory(new PropertyValueFactory<NotificationTableModel, String>("custName"));
+            tblTel.setCellValueFactory(new PropertyValueFactory<NotificationTableModel, String>("tel1"));
+            tblCata.setCellValueFactory(new PropertyValueFactory<NotificationTableModel, String>("cata"));
+            tblClass.setCellValueFactory(new PropertyValueFactory<NotificationTableModel, String>("lClass"));
+            notiTable.setItems(data);
+            ArrayList <NotificationDTO> notiArray=null;
+            notiArray=NotoficationDBController.getCustNotification();
+            if (notiArray != null){
+                for (NotificationDTO notificationDTO : notiArray) {
+                    NotificationTableModel ntd=new NotificationTableModel();
+                    ntd.setCustName(notificationDTO.getCustName());
+                    ntd.setTel1(notificationDTO.getTel());
+                    ntd.setCata(notificationDTO.getCatName());
+                    ntd.setLClass(notificationDTO.getClassType());
+                    data.add(ntd);
+                }
+            }
+
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(NavigationPageController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(NavigationPageController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
