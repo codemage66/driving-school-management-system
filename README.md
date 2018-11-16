@@ -9,7 +9,7 @@ Driving school Management standalone application using javaFX. This application 
 Database is not included with the repo. UI designed using javafx scene builder by gluon. various lib have been used for the final project such as jfoenix, controllerFx, and jars related to jasper repots.
 
 ## Getting Started
-The project developed in IntelliJ IDEA. database for the system have implemented using MySql. Interested in contributing? clone the repo and here are thee prerequisites.
+The project developed in IntelliJ IDEA. database for the system have implemented using MySql. Interested in contributing? clone the repo and here are the prerequisites.
 
 ### Prerequisites
 ``
