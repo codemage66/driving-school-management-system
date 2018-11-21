@@ -18,3 +18,6 @@ jfoenix jar library
 ``
 controlsfx --
 ``
+``
+java mysql connector
+``
