@@ -16,8 +16,12 @@ The project developed in IntelliJ IDEA. database for the system have implemented
 jfoenix jar library 
 ``
 ``
-controlsfx --
+controlsfx library --
 ``
 ``
 java mysql connector
 ``
+### Languages used to develop
+* Java
+* JavaFx User Interface
+* MySql for Database management
